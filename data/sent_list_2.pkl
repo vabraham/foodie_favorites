@@ -1,0 +1,202 @@
+(lp1
+S'Beware not to over-order.'
+p2
+aS'Per the norm with this type of cuisine, there were many veggie choices.'
+p3
+aS'I ordered the vegetarian schnitzel and each piece of vegetable was perfectly prepared, so flavorful and so beautiful.'
+p4
+aS'We always ask a ton of questions, and the wait staff has always been very helpful and patient.'
+p5
+aS"That doesn't mean that it wasn't good, and who needs a huge salad when a pound of award-winning beef is coming your way?)"
+p6
+aS'I could live on the Chicken Pho and shredded pork rolls from here.'
+p7
+aS'Til this day I still remember what I ordered: fettucine Alfredo with broccoli.'
+p8
+aS'The red vegetarian curry with potato could be my staple dish for the rest of my life and I would never tire of it.'
+p9
+aS'The spring rolls were pretty fresh, but all enjoyment was probably due to the dipping sauce.'
+p10
+aS"even if there are 15 people waiting for their orders, when you go to pick up your extra spicy shawarma.. the guy working the counter will remind you that you ordered the extra extra spicy order and it's coming up."
+p11
+aS'A good pad thai spot on the Mission.'
+p12
+aS'I usually plan my Korean BBQ outfit and after-dinner activities carefully: cotton-only garments, nothing that requires dry cleaning, no activities in close proximity to strangers (i.e.'
+p13
+aS'I only got half way through the lo mai gai and almost fainted - sooo goood!'
+p14
+aS"Yet, despite it's small stature, it seems to have a loyal following: Every sit was filled (although that wasn't too hard to accomplish), and the stream of to-go orders was every bit as consistent."
+p15
+aS'Sitting at a perfect small table by the bar we had a great view of the pasta guy at work.. My roomate was in love..'
+p16
+aS'There was one glass of red wine he fell in love with, and made the mistake of drinking too fast....he asked for another, but thinks he may have gotten a completely different wine for the second pour.'
+p17
+aS'Otherwise, it tastes more sweet.'
+p18
+aS'The nigiri is more fish than rice, again as the rice portion is small, and the fish portion large.'
+p19
+aS'I love their garlic bread and spaghetti meatball!'
+p20
+aS"Usually the chicken karaages I've had at other places are too hard, too oily, or the juice from the meat has been sucked dry from them so it's not yummy anymore."
+p21
+aS"A romantic pre-mother's day surprise dinner set up by my wonderful hubby a month and a half ahead and I loved every minute of it."
+p22
+aS"Maybe they should place a sign in the window saying they'll give you small amounts of appetizers and drinks, but nothing big if its past 10:30."
+p23
+aS'the shrimp was nice and fresh, easy to peel.'
+p24
+aS'I was pretty annoyed that we dropped $32 on a lunch of a teeny weeny lobster roll, lobster bisque soup in a breadbowl and a small cup of clam chowder.'
+p25
+aS'The Carbonara and Eggplant Parmigiana were both very tasty.'
+p26
+aS'The pan fried potstickers were ok, not phenomenal but definitely good.'
+p27
+aS'I usually order the Chicken Shawarma with extra hot sauce and some garlic sauce in it.'
+p28
+aS'the oxtail stew soup came with soy sauce and a cup of salt which was helpful in flavoring the bland, milky white broth which had some strands of yam threads in it.'
+p29
+aS'First of all, everything about this place screams "East Germany" from the moment you enter the restaurant even to the very last moment where you shut the door behind you; the instant you set foot into the restaurant you\'ll be surrounded by rustic post-war propaganda posters from around the DDR, and also by your standard hof-style wooden "picnic" tables and homey seatings...   On to the food and brew: as usual I was the first to arrive, so while waiting for my fellow diners to arrive, I decided to start the night off right with an erdinger kristallweizen.'
+p30
+aS'I would choose their pasta over Bucca di Beppo anytime!'
+p31
+aS'But the pork was wonderful as well.'
+p32
+aS'This place has good pizza!'
+p33
+aS'There were no pictures on the menu, and the only dish I know is "pork bun," so that all I could order.'
+p34
+aS'My second favorite steak place ever!'
+p35
+aS'The fish special was, I believe, a corvina seabass w/ some kind of chipotle sauce and the guys who ordered it were loving it too.'
+p36
+aS"grilled octopus was probably the best octopus preparation i've ever had."
+p37
+aS'My favorite burger!'
+p38
+aS'Always well cooked, comes out fast, and tastes better than pretty much any analogous sandwich elsewhere.'
+p39
+aS'I got the lamb lavash delux.'
+p40
+aS'The seabass and snapper were dry and rather small portions at $26 each.'
+p41
+aS'It was HUGE and the falafel was freshly fried and the cucumbers were nice and crunchy fresh and defintley spicy!'
+p42
+aS"Za's pizza is the best frickin pizza I have had in a LONG time."
+p43
+aS'The walnut bread, was a bit dry.'
+p44
+aS'The food was delicious and fresh.'
+p45
+aS'Try the lamb chops or the meatloaf'
+p46
+aS'I had the salad for starters which had organic vegetables and the most buttery croutons EVER!'
+p47
+aS'My favorite sandwich shop in the city - I get one every weekend.'
+p48
+aS"For my birthday.. i told my bf i wanted to eat here after searching here for a new restaurant..he made reservations online requesting for a table with a view and to note that it was my birthday =]   With all the good reviews.. i ordered the filet mignon and the rib eye both cooked medium.. for appetizer we decided on the shrimp... of course for dessert.. i could not miss the chance for the caramelized french toast =] my bf said it didn't even taste like french toast.. that we're used to   when we got there 10 minutes before our reservation we were seated at an open table in the corner right next to the window.. once i sat down i totally adored the salt and pepper dishes with its small shovel =P   the shrimp was interesting.. they cut them length wise in half.. the inner sides looked so smooth!"
+p49
+aS'just a good neighborhood coffee shop without the boy watching or pretentiousness you may find at the nearest starbucks.'
+p50
+aS'One entree was the salmon, and it was heavenly.'
+p51
+aS'except This pizza.'
+p52
+aS'The server brought delicious bread and bean spread and that made the brussel sprout appetizer and the roasted beet appetizer so sinfully delicious I had to eat really slow to savor each bite.'
+p53
+aS'Much of the old Swensen\'s chain seems to be gone, but the "Mother Ship" is still a light in the storm with its reliably good ice cream.'
+p54
+aS'My favorite is the chocolate with the peanut butter filling.'
+p55
+aS'Four our main dish we got chicken kabobs and kibbi (lamb balls).'
+p56
+aS'for my brunch, i ended up getting the chicken apple sausage w/ fried eggs, an english muffin and grits.'
+p57
+aS"I've had the soup a couple times and it is a bit oily."
+p58
+aS'The waiters are always friendly and knowledgeable about their selections for the day, and the fish is always fresh and amazing.'
+p59
+aS'The Roasted Turkey plate came with stuffing, mashed potatoes and cranberry sauce.'
+p60
+aS'The staff churns out overstuffed hot and cold gourmet sandwiches rapidly enough to keep the line moving at a steady clip.'
+p61
+aS'If I had known I would have mixed the toppings together before I ate the first taco.'
+p62
+aS"It's all about the homemade noodles: black bean noodles (jja jjang mien) and spicy seafood noodle soup (jjam pong)."
+p63
+aS'The Figs were so fresh and the prosciutto so damn BUTTERY, the whole thing melted in our mouths... As far as the Entrees, we all shared 3 different dishes had one phenomenal Food Orgy...yeah you heard me right, a straight up Food Orgy... Nipples were hard, Eyes were rolling back and a lot of Moaning and Drooling...'
+p64
+aS"Still, glad they had the samusa soup, which I love, but I also found a couple of new dishes that I'll remember if I return (chicken claypot, kau soi (coconut chicken noodle), platha dipper for appetizers)."
+p65
+aS'The jam is made fresh every morning!!'
+p66
+aS'OUR FOOD: We ordered the crab benedict, the monte christo, and the french toast sampler.'
+p67
+aS"Yelp was right on: - totally authentic, fresh, delicious - large portions - not a lot for non-mammal-eaters but there's the veggie schnitzel, always a good fish special (tonight: rainbow trout stuffed w/ spinach), apps - smoked salmon, pickled herring w/ creamy dill sauce, potato latkes which are mashed vs grated, etc."
+p68
+aS'On my most recent trip, we had the spicy green beans, pad thai, and the gang garee gai, which were all quite tasty, and for about $7 a dish, you really cant beat the price!'
+p69
+aS"Can't go wrong with Guac, Western, Hickory, Bacon/Cheese, North Beach and the Classic burgers."
+p70
+aS"The tuna rolls were pretty small as well (I guess that's considered normal)."
+p71
+aS'Also had the asparagus and goat cheese omlet and it hit the spot.'
+p72
+aS'Seems like a nice place to read a book or chat over coffee.'
+p73
+aS"I've had a variety of hearty pasta dishes, like the Linguine and Capellini, and great protein dishes like the Hangar Steak and Liberty Farms Duck Breast (and it's nice to see they're showcasing local meat sources to an extent)."
+p74
+aS"If you don't eat white rice, tell them when you order."
+p75
+aS'the meatballs were really tender and flavorful, but i liked the bits of pinenuts in the meatballs, added a bit of texture.'
+p76
+aS'I was informed that it was hofbrau-style food with lots of different kinds of carved meats, pastas and more.'
+p77
+aS'That being said, their green beans taste like they came right from the can, IE, like garbage.'
+p78
+aS'And then, for the dessert, we split the Sokolatina (flourless dark chocolate cake with sweetened whipped cream) - to die for!'
+p79
+aS'Had the fried calimari appetizer which were grubbing (and huge).'
+p80
+aS'Family style dining in a big dining room upstairs, with all sorts of pictures and art on the wall, and the infamous bust of the Pope as others mentioned!'
+p81
+aS'Had a great pizza.'
+p82
+aS'I would recommend the seafood stew.'
+p83
+aS'The warm baby spinach salad with balsamic onions, crispy pancetta (AMAZING), roasted tomatoes and goat cheese was great!'
+p84
+aS'great sashimi, creative grilled items, lots of sake choices.'
+p85
+aS'They noticeably forgo MSG in favor of more beef bones simmered over more time to get this level of sweetness.'
+p86
+aS"Probably the most fun margarita I've ever had."
+p87
+aS'The asparagus salad is really yummy.'
+p88
+aS'Went inside, sat myself down in front of the window (I love people watching), and the waitress came on over soon after.'
+p89
+aS'One helped me choose a red wine to sip as we checked out the menu, and the other helped me find something on the menu I could actually eat!'
+p90
+aS"I wasn't expecting much but was definitely overwhelmed with the flavor of the burrito which combined the (Mexican) salsa and the (Korean) sauce with bulgogi, kimchee, rice, beans, onion &amp; cilantro."
+p91
+aS'Came here with Julia Z. and buddies for round one of Dine About Town 2010 and was pretty blown away by the steak and ambiance.'
+p92
+aS"The only thing I'd wish they'd improve on is their Iced Tea."
+p93
+aS'The duck was pretty moist and yummy :).'
+p94
+aS'B2B done and over with?'
+p95
+aS"Under my friend's instruction I had the Monte Cristo which was a plethora of cheese and deep fried goodness."
+p96
+aS'), a small scoop of ice cream with berry sauce, and some berries in cream on the side.'
+p97
+aS'I had the corned beef hash, which was quite delicious.'
+p98
+aS'all in all, a good combination.'
+p99
+aS'Everything we had was fresh and delicious.'
+p100
+aS'Love the garden, love the breakfasts, love the great wines by the glass.'
+p101
+a.

@@ -1,0 +1,68 @@
+@import url(http://fonts.googleapis.com/css?family=Antic+Slab);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+
+html,body {
+  height:100%;
+}
+
+h1 {
+  /*font-family: 'Antic Slab', serif;*/
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 900;
+  font-size:80px;
+  color:#FFFFFF;
+}
+
+.lead {
+	color:#FFFFFF;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Custom container */
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  min-height:100%;
+  background: #FFF url(http://cdn.moneycrashers.com/wp-content/uploads/2015/10/fancy-dinner-restaurant.jpg) no-repeat center top;
+  color:#eee;
+  overflow:hidden;
+  background-size:cover;
+}
+
+.container-full a {
+  color:#efefef;
+  text-decoration:none;
+}
+
+.v-center {
+  margin-top:7%;
+}
+
+.dropdown-menu {
+  background-color: #FFFFFF;
+  width:340px;
+  text-align:center;
+  margin:0 auto;
+  color:#000000;
+}
+
+.scrollable-menu-rest {
+    height: auto;
+    max-height: 100px;
+    overflow-x: hidden;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+ol li.list-group-item { 
+    list-style: decimal inside;
+    display: list-item;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}

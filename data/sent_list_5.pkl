@@ -1,0 +1,202 @@
+(lp1
+S'The pineapple fried rice is awesome and the girl behind the counter is so sweet...'
+p2
+aS'great bar- old school, comfy leather banquet- old school...everything down just right... nice martini to start, good wine list, great steak!'
+p3
+aS'My wife and I came across Gamines after walking into a store in the Cow Hollow area on Union Street "That Takes the Cake".'
+p4
+aS'We usually come here before or after a movie and get the corned beef, mashed potatoes and one of the twenty bazillion beers they have on the menu.'
+p5
+aS'(one end of year Christmas time in the group dining area, and once near the kitchen area at a long table) The food is appealing to the eye, fresh and plentiful in terms of group family-style dining.'
+p6
+aS"Everywhere else I go, it's always just under or just over where I'd like my steak."
+p7
+aS'I got the hot fudge with toasted almond ice cream and I was in heaven.'
+p8
+aS'The housemade soup noodles, however, were really good!'
+p9
+aS"best pizza in sf so far, i love new york style pizza, also loving standing and eating them, nyc style yo... they add the toppings you want to the pre-baked plain pizza and re-bake to order, so it's always super fresh."
+p10
+aS'However, I was with my two girlfriends and we were pretty engrossed in our own conversation, even though I kept stealing glances over to the guy sitting next to me.'
+p11
+aS'Great fresh turkey sandwich and open faced meatball sub.'
+p12
+aS'Btw, the 2nd cheapest red wine was good, tasted like 200 bucks.'
+p13
+aS'I got the thanksgiving dinner (turkey, mash potatoes, gravy, stuffing) and they were all so delicious!!!'
+p14
+aS"My favorite things about Mama's...the fresh squeezed juice, strong, hot, tasty coffee and this incredible homemade jelly!"
+p15
+aS'The sashimi are always fresh.'
+p16
+aS"Didn't care that much for the Garlic Bread, but edible."
+p17
+aS"This was my first Ruth's Chris Steak House experience, and I must say, it was lovely."
+p18
+aS'Being a meat junkie carnivore, this place was a delight.'
+p19
+aS'First of all the food is pretty damn amazing, and specifically I could live off of their hot chocolate with the lovely icey whipped cream for the rest of my life.'
+p20
+aS'The shrimp were nothing to write home about but this was one of the rare times I enjoyed (however limited a portion I ate) red peppers.'
+p21
+aS"A lil bite of what everyone had to eat....and I was in heaven... a lil chicken here.... a bit of feta there....... sweet n glorious grilled mussels and shrimp...... and can't forget those lamb riblets... OMG!"
+p22
+aS'For a starter, we ordered the soup of the evening - a roasted corn bisque - and the risotto croquettes.'
+p23
+aS'They have many different flavors of hot sauce line up agains the wall, kinda cool decoration.'
+p24
+aS"Well, Im sure many of you wouldn't expect much from fried catfish, but these little buggers were phenomenal."
+p25
+aS'Love the chicken satay, MUST HAVE the pineapple rice (HEAVEN) we always order the fish...yummy!'
+p26
+aS'The Busto Salad is BOMB!!!!'
+p27
+aS'But its not just the pizza--its the atmosphere in the place and the great staff that made it all such a pleasant and satisfying experience every time I eat there.'
+p28
+aS'I def will come back to satisfy my shrimp cravings and maybe ordered a bottle drink instead!'
+p29
+aS'The corn beef is salty, but very good.'
+p30
+aS'Their focaccia style is not my favorite, more of a flatbread, but overall everything was great.'
+p31
+aS"One of my favorites is their special on the board I think it's called the The Lady Monkey Roll.....its banana's with cream cheese and fish.....incredible!"
+p32
+aS'I have worked in the neighborhood for 6 years and miss the days of $5 thai or burrito.'
+p33
+aS"It was definitely obvious that this fish was fresh, and not all fishy like some places (I won't name any names)."
+p34
+aS'The dishes are wonderful - The San Marino - yummy risotto dish with shrimp.'
+p35
+aS'It was truly made by the spicy housemade sambal; the sauce was so delicious and flavorful!'
+p36
+aS'I am happy to the point of ecstasy when I think about Korean BBQ and late night eating.'
+p37
+aS'Its worth making a trip to the city just to have a bowl of the soup!'
+p38
+aS'The desserts here are out of control, the display case is packed with house made chocolates, cakes and other tasty treats.'
+p39
+aS'i asked for medium rare but i think it came out kind of medium.'
+p40
+aS'I got my cheese and my meats and sidled over to the register where the lady behind it remarked on how great my choices were.'
+p41
+aS'ordered:  beef salad: a little on the small side but SO DELISH FRESH FLAVORFUL.'
+p42
+aS'Love its appetizers and flavorful lamb.'
+p43
+aS"I prefer Ruth's over Harris' and even HOPR."
+p44
+aS"I had a Chicken ceaser salad which was pretty heavy on the chicken, I couldn't finish it."
+p45
+aS"It has been fairly regular with it's fare."
+p46
+aS'I am a BIG fan of good ice.'
+p47
+aS'For my fellow vegetarians, there is also a good selection of fish and salads.'
+p48
+aS'A little salty for my taste but perfect portion and vegetables still firm.'
+p49
+aS'More o v e r, my r e v ie w of th is place had been d e tled t w ice.'
+p50
+aS'Chow mein is probably the least oh-my-it-is-how-much-again item on the menu.'
+p51
+aS'The soup had Lentil, Onion, Fresh Parsley and with special spices.'
+p52
+aS'(or over roasted olives,saffron potatoes, and roasted tomatoes  They had 3 choices of fish that day, a Sole, a halibut, and a snapper.'
+p53
+aS'It did have a nice kick, which I appreciated since I love spicy food.'
+p54
+aS'Filet Mignon is the only steak I get and I got it good!'
+p55
+aS'The food is always good and fresh.'
+p56
+aS"One of the very few places that open til late, it didn't take us long to devour the banchan, dol sot bi bim bap, kim chee fried rice, beef tofu stew and bul gogi."
+p57
+aS'One of my two favorite pizza places in the city!!'
+p58
+aS'here... just a solid wine list, lots of meat, and Mr. Ray Charles and Ms. Billie Holiday setting the moody.'
+p59
+aS'The cheese, sauce, crust &amp; pepperoni are perfect.'
+p60
+aS"The Rojo Hot Sauce I loved but the mild sauce could use some more work on me no likey tomato paste..Next time I'm @ my Sister's pad in the Dog Patch District &amp; need a takeout meal I'll most def roll through to dis place also the chips &amp; guac were to die for..."
+p61
+aS"Following the Yelper zeitgeist I tried the buffalo burger, and I don't regret it (the focaccia-esque bun is especially good)."
+p62
+aS'The red checked tablecloths and the raffle drawing were exactly like the annual crab feed, and we all felt a little bit better for some old San Francisco institutions still being around.'
+p63
+aS"I've had two entrees in the past several years I've been a customer, undoubtedly because now I cannot consider ordering anything but the chicken enchiladas verdes."
+p64
+aS'The portions are huge (family-style) &amp; the prices are pretty reasonable.'
+p65
+aS"Say no to the complimentary glasses and drink your $8 Riesling from the paper cups they have by the cash register, trust me, it's really more fun that way."
+p66
+aS'The icing on the cake was the Sprite we ordered.'
+p67
+aS'and returned to our table with a bowl twice as big as the two previous ones, filled with kimchi.'
+p68
+aS'Fresh fish, creative dishes.'
+p69
+aS"(they're grilled cheese, which was really cheap at $3 went up to $4.50, which is still good considering it comes with a side salad.)"
+p70
+aS'Good ice cream.'
+p71
+aS"But come on... it's located on Powell Street, half a block from Union Square, so of course you will see lots of tourists eating here after a day of shopping!!!!"
+p72
+aS'The fish is really fresh here.'
+p73
+aS"My boyfriend finished his BBQ Pork Bun before I even had a chance to see it...so I don't know how it compares to Good Luck's."
+p74
+aS'Clean environment for small social meetings or coffee breaks in the financial district.'
+p75
+aS'On another mission, I left with twelve steamed pork dumplings and they lasted me a couple of days.'
+p76
+aS'He chose the crabmeat benedict; I chose the shrimp and avocado omelet (I wanted the benedict too, but we like to try different things).'
+p77
+aS'=)  I love the Deli/Cafeteria style setting.'
+p78
+aS'Loved the hot, thick crust pizza very much.'
+p79
+aS'They baked the fish, but there was a thin crust around the fish that almost made it seem fried.'
+p80
+aS'But if you have a bunch of carnivores out for some amazing steak in San Francisco (probably the best) then head here for not only a meal but a dining experience.'
+p81
+aS'for the food, the server talked us into getting a half order of the seafood gumbo and, damn, it was a good choice.'
+p82
+aS'Tea is the real deal and decent flavor.'
+p83
+aS"The turkish coffee shake was probably the best shake I've ever had."
+p84
+aS'Oh, the salad and water jug are a nice touch.'
+p85
+aS"When you're craving a good steak, reserve a cozy booth and come to Harris'."
+p86
+aS'But with those knee high green socks I guess he is still the outgoing and fun raising character.'
+p87
+aS"Both my friend and I couldn't finish and took half home with glorious plans to eat it later :)"
+p88
+aS'Maybe next time....although the rack of lamb sounded pretty good, too.'
+p89
+aS'It needs a sauce though, like brown gravy lol.'
+p90
+aS'Another great thing about Arinell is they not only serve great pizza, but they play the best hair metal on their speakers.'
+p91
+aS'- Noodles with plum sauce (popularly known in Chinese as "zhajiang mian" and in Korean as "jajangmyeon"): I\'m not sure why they call it plum sauce because it\'s really a black soybean sauce.'
+p92
+aS'Yeah, I admit I need to stop eating soo much but what fun would that be, right?'
+p93
+aS"A little too salty for me but much less greasy than Quickly's popcorn chicken."
+p94
+aS'Super cute glasses for your root beer all branded with red lobster with big claws!'
+p95
+aS'This had a very strong garlic flavor and the shrimp was good, but it was mostly watery with egg pieces.'
+p96
+aS"I'm planning on coming back there just for this roll..."
+p97
+aS'Creamy foie gras highlighted with sweet pineapple, the wonderful texture of gelee, smoky bacon and chewy duck.'
+p98
+aS'A small silver lining for this recession?'
+p99
+aS'We ordered the Chapchae, BBQ Pork, BiBimBap, &amp; Kimchi Pancake.'
+p100
+aS'My wife and I come here and get a 12" steak for about $9 and both leave full.'
+p101
+a.

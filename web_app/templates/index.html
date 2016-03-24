@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Foodie Favorites</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='fork-and-spoon.ico') }}">
+</head>
+
+<body>
+    <div class="container-full">
+        <div class="row">
+            <div class="col-lg-12 text-right v-top" style="font-size:28pt;">
+                <a href="https://github.com/vabraham"><i class="icon-github"></i></a>  <a style="padding-right:10px" href="https://twitter.com/vuabraham"><i class="icon-twitter"></i></a>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center v-top">
+                <h1>Foodie Favorites</h1>
+                <p class="lead">This application uses Natural Language Processing on Yelp reviews
+                <br>to help users find out what dishes are most popular.
+                <br>
+                <br>
+                To begin, select a City</p>
+                <!-- <br> -->
+
+<!--                     <div class="dropdown" style="width:340px;text-align:center;margin:0 auto;">
+                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="width:150px; margin-bottom: 5px">City
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu scrollable-menu" role="menu">
+                        {% for city in sample_cities %}
+                            <li>{{ city }}</li>
+                        {% endfor %}
+                      </ul>
+                    </div> -->
+                    <div class="dropdown" style="width:340px;text-align:center;margin:0 auto;">
+                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="width:150px">City
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu scrollable-menu-rest" role="menu">
+                        {% for city in sample_cities %}
+                            {% set city_url = url_for('city', city_name=city)%}
+                            <li><a href={{city_url}}>{{ city }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+<!--                     <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
+                        <input class="form-control input-lg" title="Don't worry. We hate spam, and will not share your email with anyone." placeholder="Enter your email address" type="email" name="email">
+                        <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="submit">GO</button></span>
+                    </div> -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container" style=text-align:center>
+    <br>
+        <div class="row">
+            <div class="span12">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="text-align: left">
+                        <h3>Learn More</h3>
+                    </div>
+                    <div class="panel-body" style="text-align: justify">"Foodie Favorites" uses Natural Language Processing (NLP) techniques to classify food mentions in Yelp reviews and subsequently matches those mentions to menu items to help users find out what dishes are most popular. This project was undertaken as my Capstone during the Galvanize Data Science Immersive program. For a step-by-step account of the project process, please see my <a href="https://github.com/vabraham/foodie_favorites">project github page</a>. <b>Please note</b> that the restaurant data shown above is from an older Yelp Academic Dataset, which contains reviews from 2006-2012, so both restaurant and menu data may have changed since then. The link to this dataset is on my github.
+                    </div>
+                </div>
+            </div>
+<!--             <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Hello.</h3>
+                    </div>
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Hello.</h3>
+                    </div>
+                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 text-right v-bottom">
+                <br>
+                <br>
+                <p class="pull-right"><a href="http://www.bootply.com">Template from Bootply</a> &nbsp; © Vineet Abraham 2016</p>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!-- script references -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>

@@ -5,3 +5,8 @@ restaurants.json
 reviews.json
 rest_data.pkl
 rev_data.pkl
+example_paper.pdf
+
+# File types #
+############
+*.ipynb

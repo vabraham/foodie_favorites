@@ -35,25 +35,11 @@
                       <span class="caret"></span></button>
                       <ul class="dropdown-menu scrollable-menu" role="menu">
                         {% for rest in sample_rests %}
-                            {% set restaurant_url = url_for('restaurant', restaurant_name=rest)%}
+                            {% set restaurant_url = url_for('restaurant', restaurant_name=rest, city_name=city_name)%}
                             <li><a href={{restaurant_url}}>{{ rest }}</a></li>
                         {% endfor %}
                       </ul>
                     </div>
-<!--                     <div class="dropdown" style="width:340px;text-align:center;margin:0 auto;">
-                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="width:150px">Restaurant
-                      <span class="caret"></span></button>
-                      <ul class="dropdown-menu scrollable-menu" role="menu">
-                        {% for item in sample_rests %}
-                            {% set restaurant_url = url_for('restaurant', restaurant_name=item)%}
-                            <li><a href={{restaurant_url}}>{{ item }}</a></li>
-                        {% endfor %}
-                      </ul>
-                    </div> -->
-<!--                     <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
-                        <input class="form-control input-lg" title="Don't worry. We hate spam, and will not share your email with anyone." placeholder="Enter your email address" type="email" name="email">
-                        <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="submit">GO</button></span>
-                    </div> -->
 
             </div>
 

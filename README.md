@@ -40,7 +40,7 @@ Below are the model scores, the most important of which is <b>recall</b>. I alte
 ### Part 2 - String Matching
 After I had completed classifying text as "FOOD" or "NOT FOOD", the next task was to match the food mentions to menu items. To do this I used a combination of Levenschtein distance methods and thresholds that would keep the false positives to a minimum.
 
-Methods:
+<b>Methods:</b>
 * Partial String Ratio
 * Token Set Ratio
 
@@ -51,7 +51,43 @@ Methods:
 ## Web Application
 For each restaurant in the dataset, I ran my finalized model on all the reviews and then performed the string matching between the predicted food mentions and the menu to create a counter of popular items. I then loaded this counter along with the restaurant's info into a PostgreSQL database.
 
-All of this was done on AWS so that I could easily provide it as a web based application for anyone that was interested. I used Flask and Bootstrap to create the front-end, again, the link is at the top of this page. 
+All of this was done on AWS so that I could easily provide it as a web based application for anyone that was interested. I used Flask and Bootstrap to create the front-end, again, the link is at the top of this page. Below is an example of what the output looks like - up to 10 of the most popular menu items at the specified restaurant are provided.
+
+![Image of Success page]
+(images/2016-03-20_15-26-51_3.png)
+
+## Tools
+
+<b>Stack:</b>
+python
+git
+markdown
+bash
+
+<b>Databasing:</b>
+psycopg2
+postgresql
+
+<b>Feature Engineering:</b>
+NLTK
+regex
+
+<b>Modeling:</b>
+numpy
+pandas
+scikit learn
+sklearn_crfsuite
+json
+cPickle
+
+<b>Web App:</b>
+flask
+bootstrap
+html
+css
+
+<b>Data Processing/Web Hosting:</b>
+Amazon EC2
 
 
 

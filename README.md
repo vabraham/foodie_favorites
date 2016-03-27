@@ -19,7 +19,7 @@ To keep the scope of this project feasible to something that could be accomplish
 ## Modeling
 
 ### Part 1 - Named Entity Recognition
-To frame this as a data science problem, there were two issues at hand, the first of which was determining whether or not a word was considered "food". To do this, I used a <b>Conditional Random Field</b> (crf) algorithm, which is a type of Named Entity Recognition. A crf uses text featurization like part of speech, is it a capital, is it a title, as well as features about adjacent words, in order to make a classification.
+To frame this as a data science problem, there were two issues at hand, the first of which was determining whether or not a word was considered "food". To do this, I used a <b>Conditional Random Field</b> (CRF) algorithm, which is a type of Named Entity Recognition. A CRF uses text featurization like part of speech, is it a capital, is it a title, as well as features about adjacent words, in order to make a classification.
 
 #### Example of perfect classification in a review
 ![Image of Classification]
@@ -28,4 +28,12 @@ To frame this as a data science problem, there were two issues at hand, the firs
 #### Text Featurization
 ![Image of Text Featurization]
 (images/text_features.png)
+
+### Model Scoring
+Below are the model scores, the most important of which is <b>recall</b>. I altered my scoring method to look at an entire sentence and check if my prediction found at least 1 "FOOD" classification, if so, it was considered a true positive. 
+![Image of Model Scores]
+(images/model_scores.png)
+0.75 says that I was able to accurately classify sentences that contained "FOOD" 75% of the time. While I may be able to improve the model with some additional feature engineering and parameter tweaking, I've found that if I have a fairly large number of reviews (~150 or more), the results are still pretty good.
+
+
 

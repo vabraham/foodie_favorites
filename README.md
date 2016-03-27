@@ -29,10 +29,11 @@ To frame this as a data science problem, there were two issues at hand, the firs
 ![Image of Text Featurization]
 (images/text_features.png)
 
-### Model Scoring
+#### Model Scoring
 Below are the model scores, the most important of which is <b>recall</b>. I altered my scoring method to look at an entire sentence and check if my prediction found at least 1 "FOOD" classification, if so, it was considered a true positive. 
-![Image of Model Scores]
-(images/model_scores.png)
+->![Image of Model Scores]
+(images/model_scores.png)<-
+
 0.75 says that I was able to accurately classify sentences that contained "FOOD" 75% of the time. While I may be able to improve the model with some additional feature engineering and parameter tweaking, I've found that if I have a fairly large number of reviews (~150 or more), the results are still pretty good.
 
 

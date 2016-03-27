@@ -44,7 +44,7 @@ After I had completed classifying text as "FOOD" or "NOT FOOD", the next task wa
 * Partial String Ratio
 * Token Set Ratio
 
-#### Example of perfect matching
+#### Example of perfect string matching
 ![Image of Menu Matching]
 (images/matching.png)
 
@@ -59,35 +59,35 @@ All of this was done on AWS so that I could easily provide it as a web based app
 ## Tools
 
 <b>Stack:</b>
-python
-git
-markdown
-bash
+*python
+*git
+*markdown
+*bash
 
-<b>Databasing:</b>
-psycopg2
-postgresql
+<b>Database:</b>
+*psycopg2
+*PostgreSQL
 
 <b>Feature Engineering:</b>
-NLTK
-regex
+*NLTK
+*regex
 
 <b>Modeling:</b>
-numpy
-pandas
-scikit learn
-sklearn_crfsuite
-json
-cPickle
+*numpy
+*pandas
+*scikit learn
+*sklearn_crfsuite
+*json
+*cPickle
 
 <b>Web App:</b>
-flask
-bootstrap
-html
-css
+*flask
+*bootstrap
+*html
+*css
 
 <b>Data Processing/Web Hosting:</b>
-Amazon EC2
+*Amazon EC2
 
 
 

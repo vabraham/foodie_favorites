@@ -32,10 +32,26 @@ To frame this as a data science problem, there were two issues at hand, the firs
 #### Model Scoring
 Below are the model scores, the most important of which is <b>recall</b>. I altered my scoring method to look at an entire sentence and check if my prediction found at least 1 "FOOD" classification, if so, it was considered a true positive. 
 
-.center[![Image of Model Scores]
-(images/model_scores.png)]
+![Image of Model Scores]
+(images/model_scores.png)
 
 0.75 says that I was able to accurately classify sentences that contained "FOOD" 75% of the time. While I may be able to improve the model with some additional feature engineering and parameter tweaking, I've found that if I have a fairly large number of reviews (~150 or more), the results are still pretty good.
+
+### Part 2 - String Matching
+After I had completed classifying text as "FOOD" or "NOT FOOD", the next task was to match the food mentions to menu items. To do this I used a combination of Levenschtein distance methods and thresholds that would keep the false positives to a minimum.
+
+Methods:
+* Partial String Ratio
+* Token Set Ratio
+
+#### Example of perfect matching
+![Image of Menu Matching]
+(images/matching.png)
+
+## Web Application
+For each restaurant in the dataset, I ran my finalized model on all the reviews and then performed the string matching between the predicted food mentions and the menu to create a counter of popular items. I then loaded this counter along with the restaurant's info into a PostgreSQL database.
+
+All of this was done on AWS so that I could easily provide it as a web based application for anyone that was interested. I used Flask and Bootstrap to create the front-end, again, the link is at the top of this page. 
 
 
 

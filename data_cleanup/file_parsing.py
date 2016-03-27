@@ -3,21 +3,18 @@ import nltk
 import unicodedata
 import random
 import re
+import cPickle as pickle
 
 
-# Load the json files into a python readable format
 def json_parse(filename):
-    new_list = []
+    '''Load the json files into a python readable format'''
     with open(filename) as fn:
-        for line in fn:
-            new_list.append(json.loads(line))
-    return new_list
+        data = [json.loads(line) for line in fn]
+    return data
 
 
-# Remove restaurant chains and duplicates
 def duplicate_rest(rest_data, rev_data):
-    # city set
-    # {u'boston', u'chicago', u'la', u'nyc', u'philadelphia', u'sf', u'washington'}
+    '''Remove restaurant chains'''
     restaurants_to_remove = ["Applebee's",
                              "Arby's",
                              'Au Bon Pain',
@@ -69,8 +66,8 @@ def duplicate_rest(rest_data, rev_data):
     return id_list, city_rest_data, city_rev_data
 
 
-# Create tuple of business id and individual review for all review ratings >= 4
 def comb_id_reviews(rev_data):
+    '''Create tuple of business id and individual review for all reviews with ratings >= 4'''
     list_revs = []
     for i in xrange(len(rev_data)):
         for review in rev_data[i]['reviews']:
@@ -79,8 +76,8 @@ def comb_id_reviews(rev_data):
     return list_revs
 
 
-# Split individual reviews into sentences - format (review id, [sentences])
 def sent_split(list_revs):
+    '''Split individual reviews into sentences - format (review id, [sentences])'''
     rev_sent = []
     for review in list_revs:
         sent = unicodedata.normalize('NFKD', review[1]).encode('ascii', 'ignore')
@@ -89,35 +86,32 @@ def sent_split(list_revs):
     return rev_sent
 
 
-# Append an index value to all sentences
 def ind_sentences(rev_sent):
+    '''Append an index value to all sentences'''
     sent_list = []
     for review in rev_sent:
         sent_list.extend(review[1])
-    i = 0
-    for row in sent_list:
-        i += 1
-        row = (i, row)
+    sent_list = [(i, row) for i, row in enumerate(sent_list)]
     return sent_list
 
 
-# Take a random sample of sentences (for model training and testing)
 def randomize_sentences(sent_list, sample_size):
+    '''Take a random sample of sentences (for model training and testing)'''
     random_indices = random.sample(xrange(len(sent_list)), sample_size)
-    random_sent = [sent_list[x] for x in random_indices]
-    return random_sent
+    sent_list = [sent_list[x] for x in random_indices]
+    return sent_list
 
 
-# POS tag all words in each sentence
 def pos_tagger(sent_list):
+    '''POS tag all words in each sentence'''
     pos_tag_list = []
     for sentence in sent_list:
-        pos_tag_list.append(nltk.pos_tag(re.findall(r"[\w']+|[(.,!?;)]", sentence)))
+        pos_tag_list.append(nltk.pos_tag(re.findall(r"[\w']+|[(.,!?;)]", sentence[1])))
     return pos_tag_list
 
 
-# Allow users to manually tag whether words in sentences are "FOOD" or "OTHER"
 def tag_words_crf(pos_tag_list, sent_list):
+    '''Allow users to manually tag whether words in sentences are "FOOD" or "OTHER"'''
     i = -1
     for pos in pos_tag_list:
         i += 1
@@ -133,15 +127,12 @@ def tag_words_crf(pos_tag_list, sent_list):
     return pos_tag_list
 
 
-# if __name__ == '__main__':
-#     rest_data = json_parse('../cs224n-food/data/restaurants.json')
-#     rev_data = json_parse('../cs224n-food/data/reviews.json')
+if __name__ == '__main__':
+    rest_data = json_parse('../data/restaurants.json')
+    rev_data = json_parse('../data/reviews.json')
 
-#     # with open("../data/rest_data.pkl", "w") as fp:
-#     #     pickle.dump(rest_data, fp)
+    with open("../data/rest_data.pkl", "w") as fp:
+        pickle.dump(rest_data, fp)
 
-#     # with open("../data/rev_data.pkl", "wb") as fp:
-#     #     pickle(rev_data, fp)
-
-#     city_list = set([rest['city'] for rest in rest_data])
-#     # city_list = {u'boston', u'chicago', u'la', u'nyc', u'philadelphia', u'sf', u'washington'}
+    with open("../data/rev_data.pkl", "w") as fp:
+        pickle.dump(rev_data, fp)

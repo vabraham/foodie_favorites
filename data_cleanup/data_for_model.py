@@ -1,14 +1,15 @@
-from file_parsing import json_parse, city_data, comb_id_reviews, sent_split
-from file_parsing import ind_sentences
+from file_parsing import json_parse, duplicate_rest, comb_id_reviews
+from file_parsing import ind_sentences, sent_split, pos_tagger
 from collections import Counter
 from nltk.tokenize import RegexpTokenizer
 import cPickle as pickle
 import unicodedata
 import nltk
+import random
 
 
-# Pull menu list out of restaurant data
 def get_menu_list(rest_data):
+    '''Pull menu list out of restaurant data'''
     menu_list = []
     for rest in rest_data:
         for item in rest['items']:
@@ -17,8 +18,8 @@ def get_menu_list(rest_data):
     return menu_list
 
 
-# Pos tag all menu items
 def pos_list(menu_list):
+    '''Part of speech tag all menu items'''
     pos_list = []
     for line in menu_list:
         line = unicodedata.normalize('NFKD', line).encode('ascii', 'ignore')
@@ -31,32 +32,33 @@ def pos_list(menu_list):
     return new_pos_list, pos_list
 
 
-# Return only most common words from total pos_list, 45 was chosen based on views of the word counts
 def common_words(pos_list):
+    '''Return only most common words from total pos_list, 45 was chosen based on views of the word counts'''
     cnt = Counter(pos_list)
     new_dict = dict((k, v) for k, v in cnt.items() if v >= 45)
     word_list = new_dict.keys()
     return [word for word in word_list if len(word) > 2]
 
 
-# Return only sentences containing words from word list
 def sent_check(sentences, word_list):
-    tokenizer = RegexpTokenizer(r'\w+')
+    '''Return only sentences containing words from word list'''
+    toke = RegexpTokenizer(r'\w+')
     sentences_to_test = []
     for sent in sentences:
-        if any(word in tokenizer.tokenize(sent.lower()) for word in word_list):
+        if any(word in toke.tokenize(sent.lower()) for word in word_list):
             sentences_to_test.append(sent)
     return sentences_to_test
 
 if __name__ == '__main__':
-    rest_data = json_parse('../cs224n-food/data/restaurants.json')
-    rev_data = json_parse('../cs224n-food/data/reviews.json')
+    # Load data
+    rest_data = json_parse('../data/restaurants.json')
+    rev_data = json_parse('../data/reviews.json')
 
-    # Getting SF data only
-    id_list, sf_rest, sf_rev = city_data(rest_data, rev_data, 'sf')
+    # Remove duplicates (chain restaurants)
+    id_list, rest, rev = duplicate_rest(rest_data, rev_data)
 
-    # Creating a tuple of business id and individual review for reviews greater than or equal to 4
-    reviews_comb = comb_id_reviews(sf_rev)
+    # Creating a tuple of business id and individual review for reviews >= 4 stars
+    reviews_comb = comb_id_reviews(rev)
 
     # Splitting reviews into sentences
     reviews_split = sent_split(reviews_comb)
@@ -64,13 +66,13 @@ if __name__ == '__main__':
     # Getting all individual sentences
     sentences = ind_sentences(reviews_split)
 
-    # Get menus for all SF restaurants
-    menu_list = get_menu_list(sf_rest)
+    # Get menus for all restaurants
+    menu_list = get_menu_list(rest)
 
-    # Get pos tags for all menu items
+    # Get POS tags for all menu items
     new_pos_list, pos_list = pos_list(menu_list)
 
-    # Return only most common words from SF menu bag of words
+    # Return only most common words from bag of words
     word_list = common_words(pos_list)
     words_to_remove = ['special', 'won', 'soda', 'snow', 'pcs.', 'noodles,', 'family', 'seafood', 'noodles,']
     word_list = [word for word in word_list if word not in words_to_remove]
@@ -86,49 +88,46 @@ if __name__ == '__main__':
     with open("../data/sent_list_from_wl.pkl", "w") as fp:
         pickle.dump(sentences_to_check, fp)
 
-    # Create data to train and test the model (**running this will attain different results since
-    # I did not use a random state number when initially performing this step**)
+    # Create data to train and test the model (**running this will attain different results since I did not use a random state number when initially performing this step**)
+    test_sent = random.sample(sentences_to_check, 500)
+    test_g_1 = test_sent[:100]
+    test_g_2 = test_sent[100:200]
+    test_g_3 = test_sent[200:300]
+    test_g_4 = test_sent[300:400]
+    test_g_5 = test_sent[400:500]
 
-    ## Create training data
-    # test_sent = random.sample(sentences_to_check, 500)
-    # test_g_1 = test_sent[:100]
-    # test_g_2 = test_sent[100:200]
-    # test_g_3 = test_sent[200:300]
-    # test_g_4 = test_sent[300:400]
-    # test_g_5 = test_sent[400:500]
+    pos_tag_lst1 = pos_tagger(test_g_1)
+    pos_tag_lst2 = pos_tagger(test_g_2)
+    pos_tag_lst3 = pos_tagger(test_g_3)
+    pos_tag_lst4 = pos_tagger(test_g_4)
+    pos_tag_lst5 = pos_tagger(test_g_5)
 
-    # pos_tag_lst1 = pos_tagger(test_g_1)
-    # pos_tag_lst2 = pos_tagger(test_g_2)
-    # pos_tag_lst3 = pos_tagger(test_g_3)
-    # pos_tag_lst4 = pos_tagger(test_g_4)
-    # pos_tag_lst5 = pos_tagger(test_g_5)
+    # Pickle all POS tagged sentences and original sentences
+    with open("../data/pre_proc_pkl/pos_tag_lst1.pkl", "w") as fp:
+        pickle.dump(pos_tag_lst1, fp)
+    with open("../data/pre_proc_pkl/pos_tag_lst2.pkl", "w") as fp:
+        pickle.dump(pos_tag_lst2, fp)
+    with open("../data/pre_proc_pkl/pos_tag_lst3.pkl", "w") as fp:
+        pickle.dump(pos_tag_lst3, fp)
+    with open("../data/pre_proc_pkl/pos_tag_lst4.pkl", "w") as fp:
+        pickle.dump(pos_tag_lst4, fp)
+    with open("../data/pre_proc_pkl/pos_tag_lst5.pkl", "w") as fp:
+        pickle.dump(pos_tag_lst5, fp)
+    with open("../data/pre_proc_pkl/sent_list_1.pkl", "w") as fp:
+        pickle.dump(test_g_1, fp)
+    with open("../data/pre_proc_pkl/sent_list_2.pkl", "w") as fp:
+        pickle.dump(test_g_2, fp)
+    with open("../data/pre_proc_pkl/sent_list_3.pkl", "w") as fp:
+        pickle.dump(test_g_3, fp)
+    with open("../data/pre_proc_pkl/sent_list_4.pkl", "w") as fp:
+        pickle.dump(test_g_4, fp)
+    with open("../data/pre_proc_pkl/sent_list_5.pkl", "w") as fp:
+        pickle.dump(test_g_5, fp)
 
-    # with open("../data/pos_tag_lst1.pkl", "w") as fp:
-    #     pickle.dump(pos_tag_lst1, fp)
-    # with open("../data/pos_tag_lst2.pkl", "w") as fp:
-    #     pickle.dump(pos_tag_lst2, fp)
-    # with open("../data/pos_tag_lst3.pkl", "w") as fp:
-    #     pickle.dump(pos_tag_lst3, fp)
-    # with open("../data/pos_tag_lst4.pkl", "w") as fp:
-    #     pickle.dump(pos_tag_lst4, fp)
-    # with open("../data/pos_tag_lst5.pkl", "w") as fp:
-    #     pickle.dump(pos_tag_lst5, fp)
-
-    # with open("../data/sent_list_1.pkl", "w") as fp:
-    #     pickle.dump(test_g_1, fp)
-    # with open("../data/sent_list_2.pkl", "w") as fp:
-    #     pickle.dump(test_g_2, fp)
-    # with open("../data/sent_list_3.pkl", "w") as fp:
-    #     pickle.dump(test_g_3, fp)
-    # with open("../data/sent_list_4.pkl", "w") as fp:
-    #     pickle.dump(test_g_4, fp)
-    # with open("../data/sent_list_5.pkl", "w") as fp:
-    #     pickle.dump(test_g_5, fp)
-
-    ## Create testing data
-    # overall_test = random.sample(sentences, 100)
-    # pos_overall = pos_tagger(overall_test)
-    # with open("../data/pos_overall.pkl", "w") as fp:
-    #     pickle.dump(pos_overall, fp)
-    # with open("../data/sent_overall.pkl", "w") as fp:
-    #     pickle.dump(overall_test, fp)
+    # Create and pickle test data (**running this will attain different results since I did not use a random state number when initially performing this step**)
+    overall_test = random.sample(sentences, 100)
+    pos_overall = pos_tagger(overall_test)
+    with open("../data/pre_proc_pkl/pos_overall.pkl", "w") as fp:
+        pickle.dump(pos_overall, fp)
+    with open("../data/pre_proc_pkl/sent_overall.pkl", "w") as fp:
+        pickle.dump(overall_test, fp)

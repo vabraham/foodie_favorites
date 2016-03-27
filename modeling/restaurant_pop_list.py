@@ -1,8 +1,8 @@
 import nltk
 import unicodedata
-from file_parsing import json_parse, duplicate_rest
+from file_parsing import duplicate_rest
 from file_parsing import pos_tagger
-from model import word2features, sent2features, sent2labels, sent2tokens
+from model import word2features, sent2features
 from sklearn.externals import joblib
 from fuzzywuzzy import fuzz
 from collections import Counter
@@ -11,6 +11,7 @@ import cPickle as pickle
 
 
 def get_only_rest_w_menu(rest_data, rev_data):
+    '''Get only restaurants that have a menu listed in the dataset'''
     rest_data_w_menus = [rest for rest in rest_data if rest['items']]
     id_list = [rest['id'] for rest in rest_data_w_menus]
     rev_data_w_menus = [rev for rev in rev_data if rev['id'] in id_list]
@@ -18,11 +19,13 @@ def get_only_rest_w_menu(rest_data, rev_data):
 
 
 def rp_comb_id_reviews(rev_data):
+    '''Only get reviews that are greater than or equal to 4 stars'''
     list_revs = [rev['comment'] for rev in rev_data['reviews'] if rev['rating'] >= 4]
     return list_revs
 
 
 def rp_sent_split(list_revs):
+    '''Split reviews into sentences'''
     rev_sent = []
     for review in list_revs:
         sent = unicodedata.normalize('NFKD', review).encode('ascii', 'ignore')
@@ -35,11 +38,7 @@ def rp_ind_sentences(rev_sent):
     sent_list = []
     for review in rev_sent:
         sent_list.extend(review)
-    i = 0
-    for row in sent_list:
-        i += 1
-        row = (i, row)
-
+    sent_list = [(i, row) for i, row in enumerate(sent_list)]
     return sent_list
 
 
@@ -87,18 +86,16 @@ if __name__ == '__main__':
     crf = joblib.load('second_model.pkl')
 
     # Load data
-    # rest_data = json_parse('../cs224n-food/data/restaurants.json')
-    # rev_data = json_parse('../cs224n-food/data/reviews.json')
-
     with open('../data/rev_data.pkl', 'rb') as fp:
         rev_data = pickle.load(fp)
     with open('../data/rest_data.pkl', 'rb') as fb:
         rest_data = pickle.load(fb)
 
-    # Create SF specific dataset of only restaurants with reviews
+    # Remove chains and restaurants without menus
     id_list, city_rest_data, city_rev_data = duplicate_rest(rest_data, rev_data)
     id_list, city_rest_data, city_rev_data = get_only_rest_w_menu(city_rest_data, city_rev_data)
 
+    # Make predictions for all valid restaurants, perform menu matching and load data into a POSTgres database
     for rest, revs in zip(city_rest_data, city_rev_data):
         revs = rp_comb_id_reviews(revs)
         sentences = rp_sent_split(revs)
@@ -118,6 +115,7 @@ if __name__ == '__main__':
         # Get counter of popular food at restaurant X
         vals_dict = menu_count(food_sents, rest_menu)
 
+        # Load data into POSTgres
         if vals_dict:
             rest_dict = {'rest_id': rest['id'], 'city': rest['city'], 'rest_name': rest['name'], 'menu': vals_dict}
             conn = psycopg2.connect(dbname='yelp', user='postgres', host='/tmp')

@@ -19,4 +19,13 @@ To keep the scope of this project feasible to something that could be accomplish
 ## Modeling
 
 ### Part 1 - Named Entity Recognition
-To frame this as a data science problem, there were two issues at hand, the first of which was determining whether or not a word was considered "food". To do this, I used a <b>Conditional Random Field</b> algorithm, which is a type of Named Entity Recognition.
+To frame this as a data science problem, there were two issues at hand, the first of which was determining whether or not a word was considered "food". To do this, I used a <b>Conditional Random Field</b> (crf) algorithm, which is a type of Named Entity Recognition. A crf uses text featurization like part of speech, is it a capital, is it a title, as well as features about adjacent words, in order to make a classification.
+
+#### Example of perfect classification in a review
+![Image of Classification]
+(images/example.png)
+
+#### Text Featurization
+![Image of Text Featurization]
+(images/text_features.png)
+

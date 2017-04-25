@@ -1,6 +1,7 @@
 # Foodie Favorites
 
 Check out the live app: www.foodiefavorites.co
+
 **_(If the above link doesn't work, I'm too cheap to still pay for hosting)_**
 
 Foodie Favorites is a webapp created to help users make more informed decisions about what they eat when they go out to popular restaurants. It uses Natural Language Processing to classify food mentions in Yelp reviews and subsequently matches those mentions to menu items to help users find out what dishes are most popular.
@@ -55,11 +56,11 @@ All of this was done on AWS so that I could easily provide it as a web based app
 
 <b>Modeling/Processing:</b>
 * python
-..* numpy
-..* pandas
-..* scikit learn
-..* sklearn_crfsuite
-..* cPickle
+  * numpy
+  * pandas
+  * scikit learn
+  * sklearn_crfsuite
+  * cPickle
 * bash
 
 <b>Database:</b>

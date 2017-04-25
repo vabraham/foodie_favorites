@@ -1,7 +1,6 @@
 # Foodie Favorites
 
-Check out the live app: www.foodiefavorites.co
-
+Check out the live app: www.foodiefavorites.co <br />
 **_(If the above link doesn't work, I'm too cheap to still pay for hosting)_**
 
 Foodie Favorites is a webapp created to help users make more informed decisions about what they eat when they go out to popular restaurants. It uses Natural Language Processing to classify food mentions in Yelp reviews and subsequently matches those mentions to menu items to help users find out what dishes are most popular.
@@ -20,7 +19,7 @@ To keep the scope of this project feasible to something that could be accomplish
 ## Modeling
 
 ### Part 1 - Named Entity Recognition
-To frame this as a data science problem, there were two issues at hand, the first of which was determining whether or not a word was considered "food". To do this, I used a <b>Conditional Random Field</b> (CRF) algorithm, which is a type of Named Entity Recognition. A CRF uses text featurization like part of speech, is it a capital, is it a title, as well as features about adjacent words, in order to make a classification.
+To frame this as a data science problem, there were two issues at hand, the first of which was determining whether or not a word was considered "food". To do this, I used a <b>Conditional Random Field</b> (CRF) algorithm to locate and classify text as "food" entities - a type of [named-entity recognition](https://en.wikipedia.org/wiki/Named-entity_recognition). A CRF uses text featurization like part of speech, is it a capital, is it a title, as well as features about adjacent words, in order to make a classification.
 
 #### Example of perfect classification in a review
 ![Image of Classification](images/example.png)

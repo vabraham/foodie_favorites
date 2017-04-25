@@ -53,10 +53,13 @@ All of this was done on AWS so that I could easily provide it as a web based app
 
 ## Tools
 
-<b>Stack:</b>
+<b>Modeling/Processing:</b>
 * python
-* git
-* markdown
+..* numpy
+..* pandas
+..* scikit learn
+..* sklearn_crfsuite
+..* cPickle
 * bash
 
 <b>Database:</b>
@@ -67,13 +70,9 @@ All of this was done on AWS so that I could easily provide it as a web based app
 * NLTK
 * regex
 
-<b>Modeling:</b>
-* numpy
-* pandas
-* scikit learn
-* sklearn_crfsuite
-* json
-* cPickle
+<b>Version Control:</b>
+* git
+* markdown
 
 <b>Web App:</b>
 * flask
@@ -81,7 +80,7 @@ All of this was done on AWS so that I could easily provide it as a web based app
 * html
 * css
 
-<b>Data Processing/Web Hosting:</b>
+<b>Web Hosting:</b>
 * Amazon EC2
 
 

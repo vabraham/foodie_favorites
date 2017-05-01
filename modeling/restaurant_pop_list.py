@@ -1,3 +1,4 @@
+# Load model data into hosted EC2 PostGRES table
 import nltk
 import unicodedata
 from file_parsing import duplicate_rest
@@ -11,7 +12,7 @@ import cPickle as pickle
 
 
 def get_only_rest_w_menu(rest_data, rev_data):
-    '''Get only restaurants that have a menu listed in the dataset'''
+    """Get only restaurants that have a menu listed in the dataset."""
     rest_data_w_menus = [rest for rest in rest_data if rest['items']]
     id_list = [rest['id'] for rest in rest_data_w_menus]
     rev_data_w_menus = [rev for rev in rev_data if rev['id'] in id_list]
@@ -19,13 +20,13 @@ def get_only_rest_w_menu(rest_data, rev_data):
 
 
 def rp_comb_id_reviews(rev_data):
-    '''Only get reviews that are greater than or equal to 4 stars'''
+    """Only get reviews that are greater than or equal to 4 stars."""
     list_revs = [rev['comment'] for rev in rev_data['reviews'] if rev['rating'] >= 4]
     return list_revs
 
 
 def rp_sent_split(list_revs):
-    '''Split reviews into sentences'''
+    """Split reviews into sentences."""
     rev_sent = []
     for review in list_revs:
         sent = unicodedata.normalize('NFKD', review).encode('ascii', 'ignore')
@@ -35,6 +36,7 @@ def rp_sent_split(list_revs):
 
 
 def rp_ind_sentences(rev_sent):
+    """Add indexes to review sentences."""
     sent_list = []
     for review in rev_sent:
         sent_list.extend(review)
@@ -43,6 +45,7 @@ def rp_ind_sentences(rev_sent):
 
 
 def get_menu(specific_rest):
+    """Clean data from restaurant menus."""
     drinks_to_remove = ['Sodas',
                         'Bottled Water',
                         'Tomato Juice',
@@ -60,6 +63,7 @@ def get_menu(specific_rest):
 
 
 def ner_food(predictions, sentences):
+    """Return a list of the sentences that were tagged to have a food entity."""
     list_pred = []
     for i, x in enumerate(predictions):
         if any(y == "FOOD" for y in x):
@@ -68,6 +72,7 @@ def ner_food(predictions, sentences):
 
 
 def menu_count(food_sents, rest_menu):
+    """Return a count of menu items and how often they were tagged."""
     blank_list = []
     for sent in (food_sents):
         if len(sent) <= 150:
@@ -83,7 +88,7 @@ def menu_count(food_sents, rest_menu):
 
 if __name__ == '__main__':
     # Load model
-    crf = joblib.load('second_model.pkl')
+    crf = joblib.load('final_model.pkl')
 
     # Load data
     with open('../data/rev_data.pkl', 'rb') as fp:
@@ -92,7 +97,8 @@ if __name__ == '__main__':
         rest_data = pickle.load(fb)
 
     # Remove chains and restaurants without menus
-    id_list, city_rest_data, city_rev_data = duplicate_rest(rest_data, rev_data)
+    id_list, city_rest_data, city_rev_data = duplicate_rest(rest_data,
+                                                            rev_data)
     id_list, city_rest_data, city_rev_data = get_only_rest_w_menu(city_rest_data, city_rev_data)
 
     # Make predictions for all valid restaurants, perform menu matching and load data into a POSTgres database
@@ -117,7 +123,8 @@ if __name__ == '__main__':
 
         # Load data into POSTgres
         if vals_dict:
-            rest_dict = {'rest_id': rest['id'], 'city': rest['city'], 'rest_name': rest['name'], 'menu': vals_dict}
+            rest_dict = {'rest_id': rest['id'], 'city': rest['city'],
+                         'rest_name': rest['name'], 'menu': vals_dict}
             conn = psycopg2.connect(dbname='yelp', user='postgres', host='/tmp')
             c = conn.cursor()
             for x in rest_dict['menu']:

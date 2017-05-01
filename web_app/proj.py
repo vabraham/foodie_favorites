@@ -1,47 +1,16 @@
-from flask import Flask, render_template, request
-# from flask.ext.sqlalchemy import SQLAlchemy
-import psycopg2
+from flask import Flask, render_template
 from random import sample
- 
+import psycopg2
+
+
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/sample_proj'
-# db = SQLAlchemy(app)
- 
-
-# Create our database model
-# class User(db.Model):
-#     __tablename__ = "users"
-#     id = db.Column(db.Integer, primary_key=True)
-#     email = db.Column(db.String(120), unique=True)
-
-#     def __init__(self, email):
-#         self.email = email
-
-#     def __repr__(self):
-#         return '<E-mail %r>' % self.email
-
-
-# class Restaurant(db.Model):
-#     __tablename__ = 'restaurants'
-#     id = db.Column(db.Integer, primary_key=True)
-#     rest_id = db.Column(db.Integer)
-#     rest_name = db.Column(db.String(120))
-#     menu_item = db.Column(db.String(120))
-#     menu_section = db.Column(db.String(120))
-#     count = db.Column(db.Integer)
-
-#     def __init__(self, rest_id, rest_name, menu_item, menu_section, count):
-#         self.rest_id = rest_id
-#         self.rest_name = rest_name
-#         self.menu_item = menu_item
-#         self.menu_section = menu_section
-#         self.count = self.count
 
 
 # Set "homepage" to index.html
 @app.route('/')
 def index():
-    conn = psycopg2.connect(database='yelp', user='postgres', password='testing1')
+    conn = psycopg2.connect(database='yelp', user='postgres',
+                            password='testing1')
     c = conn.cursor()
     c.execute("""   SELECT DISTINCT(city)
             FROM restaurants
@@ -52,15 +21,11 @@ def index():
     return render_template('index.html', sample_cities=sample_cities)
 
 
-@app.route('/city/<city_name>', methods=['GET','POST'])
+@app.route('/city/<city_name>', methods=['GET', 'POST'])
 def city(city_name):
-    # return "test"
-    # return request.form['item']
     city_name = city_name
-    # name = str(name)
-    # return restaurant_name
-    # if request.method == 'GET':
-    conn = psycopg2.connect(database='yelp', user='postgres', password='testing1')
+    conn = psycopg2.connect(database='yelp', user='postgres',
+                            password='testing1')
     c = conn.cursor()
     c.execute("""   SELECT DISTINCT(rest_name)
         FROM restaurants
@@ -69,16 +34,19 @@ def city(city_name):
     rests = c.fetchall()
     conn.close()
     sample_rests = [x[0] for x in rests]
-    return render_template('restaurants.html', sample_rests=sample_rests, city_name=city_name)
+    return render_template('restaurants.html', sample_rests=sample_rests,
+                           city_name=city_name)
 
 
-@app.route('/restaurant/<city_name>/<restaurant_name>', methods=['GET', 'POST'])
+@app.route('/restaurant/<city_name>/<restaurant_name>',
+           methods=['GET', 'POST'])
 def restaurant(restaurant_name, city_name):
     name = restaurant_name
     city = city_name
     zingers = ["Bingo!", "Yum!", "And the votes are in...", "De-licious"]
     phrase = sample(zingers, 1)[0]
-    conn = psycopg2.connect(database='yelp', user='postgres', password='testing1')
+    conn = psycopg2.connect(database='yelp', user='postgres',
+                            password='testing1')
     c = conn.cursor()
     c.execute("""   SELECT menu_item
         FROM restaurants
@@ -89,8 +57,8 @@ def restaurant(restaurant_name, city_name):
     menu = c.fetchall()
     conn.close()
     menu_items = [x[0] for x in menu]
-    return render_template('success.html', menu_items=menu_items, name=name,
-        phrase=phrase)
+    return render_template('success.html', menu_items=menu_items,
+                           name=name, phrase=phrase)
 
 if __name__ == '__main__':
     app.debug = True

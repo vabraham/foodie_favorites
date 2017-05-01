@@ -8,7 +8,6 @@ html,body {
 }
 
 h1 {
-  /*font-family: 'Antic Slab', serif;*/
   font-family: 'Noto Sans', sans-serif;
   font-weight: 900;
   font-size:80px;
@@ -16,11 +15,10 @@ h1 {
 }
 
 .lead {
-	color:#FFFFFF;
+  color:#FFFFFF;
   font-family: 'Open Sans', sans-serif;
 }
 
-/* Custom container */
 .container-full {
   margin: 0 auto;
   width: 100%;
@@ -60,7 +58,7 @@ h1 {
     overflow-x: hidden;
 }
 
-ol li.list-group-item { 
+ol li.list-group-item {
     list-style: decimal inside;
     display: list-item;
     color: black;

@@ -1,3 +1,4 @@
+# Run this script to featurize the data and train the model
 import sklearn_crfsuite
 import cPickle as pickle
 from sklearn.metrics import make_scorer
@@ -8,7 +9,7 @@ from sklearn_crfsuite.utils import flatten
 
 
 def word2features(sent, i):
-    '''Define word features'''
+    """Define word features."""
     word = sent[i][0]
     postag = sent[i][1]
     features = {
@@ -48,7 +49,6 @@ def word2features(sent, i):
             '-2:word.lower()': word2.lower(),
             '-2:word.istitle()': word2.istitle(),
             '-2:word.isupper()': word2.isupper(),
-#             '-2:word.isdigit()': word2.isdigit(),
             '-2:postag': postag2,
             '-2:postag[:2]': postag2[:2],
         })
@@ -75,11 +75,6 @@ def word2features(sent, i):
             '+1:word.isupper()': word1.isupper(),
             '+1:postag': postag1,
             '+1:postag[:2]': postag1[:2],
-#             '+2:word.lower()': word2.lower(),
-#             '+2:word.istitle()': word2.istitle(),
-#             '+2:word.isupper()': word2.isupper(),
-#             '+2:postag': postag2,
-#             '+2:postag[:2]': postag2[:2],
         })
     else:
         features['EOS'] = True
@@ -99,7 +94,7 @@ def sent2tokens(sent):
 
 
 def metrics(y_pred, y_test):
-    '''Define metrics - F1, Precision, and Recall'''
+    """Define metrics - F1, Precision, and Recall."""
     pred = []
     for x in y_pred:
         if any(y == 'FOOD' for y in x):
@@ -136,11 +131,11 @@ def metrics(y_pred, y_test):
 
 
 def flat_recall(y_true, y_pred):
-    '''Define flat recall metric'''
+    """Define flat recall metric."""
     ytr_flat = flatten(y_true)
     ypr_flat = flatten(y_pred)
     return recall_score(ytr_flat, ypr_flat, pos_label="FOOD",
-        average='binary')
+                        average='binary')
 
 if __name__ == '__main__':
     # Load data from pickled files
@@ -152,16 +147,14 @@ if __name__ == '__main__':
         sent_final_3 = pickle.load(fp)
     with open('../data/post_proc_pkl/sent_final_4.pkl', 'rb') as fp:
         sent_final_4 = pickle.load(fp)
-    with open('../data/post_proc_pkl/sent_final_55.pkl', 'rb') as fp:
-        sent_final_55 = pickle.load(fp)
-    with open('../data/post_proc_pkl/sent_final_510.pkl', 'rb') as fp:
-        sent_final_510 = pickle.load(fp)
-    with open('../data/post_proc_pkl/sent_overall_test.pkl', 'rb') as fp:
-        sent_overall_test = pickle.load(fp)
+    with open('../data/post_proc_pkl/sent_final_5.pkl', 'rb') as fp:
+        sent_final_5 = pickle.load(fp)
+    with open('../data/post_proc_pkl/sent_overall_post.pkl', 'rb') as fp:
+        sent_overall_post = pickle.load(fp)
 
     # Separate data into train and test
-    train_sents = sent_final_1 + sent_final_2 + sent_final_3 + sent_final_4 +sent_final_55 + sent_final_510
-    test_sents = sent_overall_test
+    train_sents = sent_final_1 + sent_final_2 + sent_final_3 + sent_final_4 +sent_final_5
+    test_sents = sent_overall_post
 
     # Extract the features from the data
     X_train = [sent2features(s) for s in train_sents]
@@ -190,4 +183,4 @@ if __name__ == '__main__':
     print grid_search.best_params_
 
     # Pickle the model
-    joblib.dump(new_crf, 'model_name.pkl')
+    joblib.dump(new_crf, 'final_model.pkl')

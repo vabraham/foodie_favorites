@@ -17,6 +17,6 @@ def word_annotation(pos_tag_fn, sent_list_fn, final_pos_tag_fn):
         pos_tag_list = pickle.load(fp)
     with open(sent_list_fn, 'rb') as fp:
         sent_list = pickle.load(fp)
-    final_post_tag = tag_words_crf(pos_tag_list, sent_list)
+    final_pos_tag = tag_words_crf(pos_tag_list, sent_list)
     with open(final_pos_tag_fn, 'w') as fp:
-        pickle.dump(final_post_tag, fp)
+        pickle.dump(final_pos_tag, fp)
